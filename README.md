@@ -3,6 +3,10 @@
 A React and Vite frontend for managing patient admissions. The frontend uses the
 FastAPI backend at `http://127.0.0.1:8000`.
 
+## Dashboard Preview
+
+![Patient management system dashboard](docs/images/patient-management-dashboard.png)
+
 ## Tech Stack
 
 | Area | Technologies |
