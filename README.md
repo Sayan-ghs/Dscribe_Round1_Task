@@ -3,6 +3,17 @@
 A React and Vite frontend for managing patient admissions. The frontend uses the
 FastAPI backend at `http://127.0.0.1:8000`.
 
+## Tech Stack
+
+| Area | Technologies |
+| --- | --- |
+| Frontend | React, JavaScript, Vite, CSS |
+| UI icons | Phosphor Icons (`@phosphor-icons/react`) |
+| Backend API | Python, FastAPI, Pydantic |
+| Data access | SQLAlchemy ORM |
+| Database | Configured through `DATABASE_URL`; PostgreSQL drivers are available |
+| Frontend quality tools | ESLint |
+
 ## Requirements
 
 - Node.js and npm
