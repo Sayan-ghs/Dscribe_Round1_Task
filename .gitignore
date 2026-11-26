@@ -1,3 +1,4 @@
+myenv/
 .env
-__pycache__
-myenv
+__pycache__/
+*.db

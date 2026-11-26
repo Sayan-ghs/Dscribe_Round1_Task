@@ -14,7 +14,12 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = FastAPI(title= "Patient Admission API")
-app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://dscribe-round1-task-sgld.vercel.app", "http://localhost:5173"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.exception_handler(RequestValidationError)
 async def validation_handler(request: Request, exc: RequestValidationError):
@@ -49,7 +54,10 @@ WARDS = ["General", "ICU", "Emergency", "Maternity", "Pediatric"]
 DEPARTMENTS = ["Cardiology", "Neurology", "Orthopedics", "Pediatrics", "General Medicine"]
 DOCTORS = ["Dr. Sharma", "Dr. Banerjee", "Dr. Iyer", "Dr. Khan", "Dr. Das"]
 
-        
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
 @app.get("/api/options")
 def options():
         return {
